@@ -32,7 +32,7 @@ public class SeckillDaoTest {
     }
 
     @Test
-    public void queryById(){
+    public void queryById() {
         long id = 1000L;
         Seckill seckill = seckillDao.queryById(id);
         System.out.println(seckill);
@@ -42,7 +42,7 @@ public class SeckillDaoTest {
     @Test
     public void queryAll() {
         List<Seckill> seckillList = seckillDao.queryAll(0, 4);
-        for(Seckill seckill : seckillList){
+        for (Seckill seckill : seckillList) {
             System.out.println(seckill);
         }
     }

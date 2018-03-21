@@ -1,4 +1,5 @@
 package cn.dean.seckill.exception;
+
 /**
  * 秒杀关闭异常
  */

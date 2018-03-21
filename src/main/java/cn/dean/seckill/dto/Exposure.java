@@ -17,8 +17,9 @@ public class Exposure {
     //当前时间（毫秒）
     private long now;
 
-    public Exposure(boolean exposed, long start, long end, long now) {
+    public Exposure(boolean exposed, long seckillId, long start, long end, long now) {
         this.exposed = exposed;
+        this.seckillId = seckillId;
         this.start = start;
         this.end = end;
         this.now = now;
@@ -81,5 +82,17 @@ public class Exposure {
 
     public void setNow(long now) {
         this.now = now;
+    }
+
+    @Override
+    public String toString() {
+        return "Exposure{" +
+                "exposed=" + exposed +
+                ", seckillId=" + seckillId +
+                ", md5='" + md5 + '\'' +
+                ", start=" + start +
+                ", end=" + end +
+                ", now=" + now +
+                '}';
     }
 }
