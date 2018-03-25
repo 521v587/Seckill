@@ -1,11 +1,11 @@
-
+<%@page contentType="text/html; charset=UTF-8" language="java" %>
 <%--引入jstl--%>
 <%@include file="common/tag.jsp"%>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>秒杀列表页</title>
+    <title>秒杀商品列表页</title>
     <%@include file="common/head.jsp"%>
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <h2>秒杀列表</h2>
             </div>
             <div class="panel-body">
-                <div class="table table-hover">
+                <table class="table table-hover">
                     <thead>
                         <tr>
                             <th>名称</th>
@@ -27,7 +27,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach var="seckill" items="${seckillList}">
+                        <c:forEach items="${seckillList}" var="seckill">
                             <tr>
                                 <td>${seckill.name}</td>
                                 <td>${seckill.number}</td>
@@ -41,12 +41,12 @@
                                     <fmt:formatDate value="${seckill.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
                                 </td>
                                 <td>
-                                    <<a class="btn btn-info" href="/seckill/${seckill.seckillId}/detail" target="_blank" >Link</a>
+                                    <a class="btn btn-info" href="/seckill/${seckill.seckillId}/detail" target="_blank">Link</a>
                                 </td>
                             </tr>
                         </c:forEach>
                     </tbody>
-                </div>
+                </table>
             </div>
         </div>
     </div>
